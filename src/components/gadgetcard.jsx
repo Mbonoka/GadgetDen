@@ -30,7 +30,7 @@ const GadgetCard = ({ gadget }) => {
     >
       <CardMedia
         component="img"
-        height="80"
+        height="50"
         image={gadget.image}
         alt={gadget.name}
         sx={{ objectFit: 'contain', p: 2 }}
