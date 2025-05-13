@@ -5,18 +5,17 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const partners = [
-  { name: 'Apple', logo: 'https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png' },
-  { name: 'Samsung', logo: 'https://1000logos.net/wp-content/uploads/2017/06/Samsung-Logo.png' },
-  { name: 'Google', logo: 'https://1000logos.net/wp-content/uploads/2021/05/Google-logo.png' },
-  { name: 'Microsoft', logo: 'https://1000logos.net/wp-content/uploads/2021/04/Microsoft-logo.png' },
-  { name: 'Intel', logo: 'https://1000logos.net/wp-content/uploads/2017/03/Intel-Logo.png' },
-  { name: 'Dell', logo: 'https://1000logos.net/wp-content/uploads/2017/03/Dell-Logo.png' },
-  { name: 'HP', logo: 'https://1000logos.net/wp-content/uploads/2017/03/HP-Logo.png' },
-  { name: 'Lenovo', logo: 'https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png' },
-  { name: 'Sony', logo: 'https://1000logos.net/wp-content/uploads/2017/03/Sony-Logo.png' },
-  { name: 'Nvidia', logo: 'https://1000logos.net/wp-content/uploads/2017/03/Nvidia-Logo.png' },
-  { name: 'Qualcomm', logo: 'https://1000logos.net/wp-content/uploads/2017/03/Qualcomm-Logo.png' },
-  { name: 'Huawei', logo: 'https://1000logos.net/wp-content/uploads/2017/03/Huawei-Logo.png' },
+  { name: 'Apple', logo: '/Apple-Logo.png' },
+  { name: 'Samsung', logo: '/Samsung-Logo.png' },
+  { name: 'Google', logo: '/Google-logo.png' },
+  { name: 'Microsoft', logo: '/Microsoft-logo.png' },
+  { name: 'Dell', logo: '/Dell-logo.jpg' },
+  { name: 'HP', logo: '/hp.png' },
+  { name: 'Lenovo', logo: '/Lenovo-Logo.png' },
+  { name: 'Sony', logo: '/sony.png' },
+  { name: 'Nvidia', logo: '/nvidia.png' },
+  { name: 'Qualcomm', logo: '/qualcomm.png' },
+  { name: 'Huawei', logo: '/Huawei.jpeg' },
 ];
 
 const PartnersSection = () => {
