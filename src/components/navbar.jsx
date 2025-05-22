@@ -142,7 +142,7 @@ const TopNavBar = () => {
               endIcon={<ArrowDropDown />}
               startIcon={<AccountCircle />}
             >
-              Hi, Ivy
+              Hi
             </Button>
 
             <Menu
