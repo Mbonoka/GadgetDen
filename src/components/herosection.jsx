@@ -191,7 +191,7 @@ const HeroSection = () => {
               textShadow: '0 0 10px rgba(255, 255, 255, 0.8)',
             }}
           >
-            WE BUILD THE FUTURE, BUILD WITH US
+            Experience the Future in Your Palm
           </Typography>
           <Typography
             variant="subtitle1"
@@ -206,7 +206,7 @@ const HeroSection = () => {
               mt: 2,
             }}
           >
-            Our team of experts in house building is here to bring your vision to life.
+            🛍️ Shop now — your next upgrade awaits.
           </Typography>
         </Box>
         <Grid
