@@ -14,21 +14,20 @@ const gadgets = [
     name: 'Samsung Galaxy S24 Ultra',
     description: '512GB, Titanium Gray, 200MP Camera',
     price: 195000,
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-1-202309?wid=400&hei=300&fmt=jpeg&qlt=80&.v=1692923781366',
-  },
+    image: 'https://th.bing.com/th/id/OIP.k3aSxo70zN45JFHDBPVl4gHaHa?w=199&h=199&c=7&r=0&o=5&cb=iwc2&dpr=1.5&pid=1.7',},
   {
     id: 3,
     name: 'MacBook Air M2',
     description: '13", 8GB RAM, 512GB SSD, Midnight',
     price: 185000,
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-1-202309?wid=400&hei=300&fmt=jpeg&qlt=80&.v=1692923781366',
+    image: 'https://th.bing.com/th/id/OIP.MAybacQXYYSgZK4tJvP7fwHaEK?w=282&h=180&c=7&r=0&o=5&cb=iwc2&dpr=1.5&pid=1.7',
   },
   {
     id: 4,
     name: 'HP Spectre x360',
     description: '14", Intel Evo, 16GB RAM, 1TB SSD',
     price: 175000,
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-1-202309?wid=400&hei=300&fmt=jpeg&qlt=80&.v=1692923781366',
+    image: 'https://th.bing.com/th/id/OIP.5-dPn22msQqZH5CFxhobCwHaEu?w=285&h=181&c=7&r=0&o=5&cb=iwc2&dpr=1.5&pid=1.7',
   },
 ];
 
@@ -84,7 +83,7 @@ const GadgetCard = ({ gadget }) => {
       }}
       onClick={() => console.log('Clicked gadget:', gadget.name)}
     >
-      <Box sx={{ width: '40%', height: '100%' }}>
+      <Box sx={{ width: '80%', height: '100%' }}>
         <img
           src={gadget.image}
           alt={gadget.name}
@@ -100,9 +99,6 @@ const GadgetCard = ({ gadget }) => {
         <Typography variant="h6" sx={{ fontSize: '0.85rem', mb: 0.5 }}>
           {gadget.name}
         </Typography>
-        <Typography variant="body2" sx={{ fontSize: '0.65rem', mb: 0.5 }}>
-          {gadget.description}
-        </Typography>
         <Typography variant="h6" sx={{ fontSize: '0.85rem' }}>
           KSh {gadget.price.toLocaleString()}
         </Typography>
@@ -110,6 +106,7 @@ const GadgetCard = ({ gadget }) => {
     </Box>
   );
 };
+
 
 const HeroSection = () => {
   return (
