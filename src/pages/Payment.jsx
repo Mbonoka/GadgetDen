@@ -24,11 +24,15 @@ export default function Payment() {
     setError("");
     setSuccessMsg("");
 
+    // Validate phone number
     if (!phoneNumber.match(/^07\d{8}$/)) {
-      setError("Enter a valid Kenyan phone number starting with 07 and 10 digits long.");
+      setError(
+        "Enter a valid Kenyan phone number starting with 07 and 10 digits long."
+      );
       return;
     }
 
+    // Validate amount
     if (!amount || isNaN(amount) || Number(amount) <= 0) {
       setError("Invalid payment amount.");
       return;
@@ -37,23 +41,33 @@ export default function Payment() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/mpesa/stkpush", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          phone: phoneNumber.replace(/^0/, "254"), // Convert 07X... to 2547X...
-          amount: Number(amount),
-        }),
-      });
+      const response = await fetch(
+        "http://localhost:5000/api/mpesa/stkpush",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            phone: phoneNumber.replace(/^0/, "254"), // Convert 07X to 2547X
+            amount: Number(amount),
+          }),
+        }
+      );
 
       const data = await response.json();
 
       if (response.ok) {
-        setSuccessMsg(`STK Push sent to ${phoneNumber}. Check your phone to complete the payment.`);
+        setSuccessMsg(
+          `STK Push sent to ${phoneNumber}. Check your phone to complete the payment.`
+        );
       } else {
-        setError(data.error || "Failed to initiate payment.");
+        // Convert error object to string safely
+        const errorMessage =
+          data.error && typeof data.error !== "string"
+            ? JSON.stringify(data.error)
+            : data.error || "Failed to initiate payment.";
+        setError(errorMessage);
       }
     } catch (err) {
       setError("Server error. Please try again later.");
@@ -63,7 +77,15 @@ export default function Payment() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, mx: "auto", p: 3, border: "1px solid #ccc", borderRadius: 2 }}>
+    <Box
+      sx={{
+        maxWidth: 400,
+        mx: "auto",
+        p: 3,
+        border: "1px solid #ccc",
+        borderRadius: 2,
+      }}
+    >
       <Typography variant="h5" gutterBottom>
         Pay with M-Pesa
       </Typography>
